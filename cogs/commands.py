@@ -3,7 +3,7 @@ from discord.ext import commands
 import numpy as np
 
 
-data = np.loadtxt(r'C:\Users\pjotr\PycharmProjects\Namebot 2\list.txt', dtype=str, delimiter="\n", encoding="utf8")
+data = np.loadtxt(r'.\list.txt', dtype=str, delimiter="\n", encoding="utf8")
 bad_words = []
 
 for word in data:
