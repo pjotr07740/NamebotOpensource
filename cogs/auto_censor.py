@@ -2,8 +2,12 @@ import discord
 from discord.ext import commands
 import numpy as np
 import asyncio
+import os
 
-data = np.loadtxt(r'.\list.txt', dtype=str, delimiter="\n", encoding="utf8")
+
+path = os.path.dirname(os.path.realpath("./list.txt"))
+
+data = np.loadtxt(f'{path}\list.txt', dtype=str, delimiter="\n", encoding="utf8")
 bad_words = []
 
 
@@ -27,7 +31,7 @@ class AutoCensor(commands.Cog):
             description="Someone changed his/her username"
         )
 
-        guild = self.bot.get_guild(741707396648534017)
+        guild = self.bot.get_guild(167435050105700352)
         channel = discord.utils.get(guild.text_channels, name="logs")
         try:
             nick = after.nick.lower()
@@ -62,7 +66,7 @@ class AutoCensor(commands.Cog):
             description="Someone changed his/her username"
         )
 
-        guild = self.bot.get_guild(741707396648534017)
+        guild = self.bot.get_guild(167435050105700352)
         channel = discord.utils.get(guild.text_channels, name="logs")
 
         try:
