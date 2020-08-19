@@ -6,7 +6,7 @@ import os
 
 path = os.path.dirname(os.path.realpath("./list.txt"))
 
-data = np.loadtxt(f'{path}\list.txt', dtype=str, delimiter="\n", encoding="utf8")
+data = np.loadtxt(f'{path}/list.txt', dtype=str, delimiter="\n", encoding="utf8")
 bad_words = []
 
 for word in data:
