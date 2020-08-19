@@ -30,4 +30,4 @@ for filename in os.listdir('./cogs'):
         bot.load_extension(f"cogs.{filename[:-3]}")
 
 
-bot.run("NzI2MTg2NTI4NzYxNzA4NTQ0.XvZn6A.jmsiHPeA2NRfG7ZMMfS_uAShuRM")
+bot.run("NzEyNDE1ODk4MjAzNTg2NTcw.XsRPAg.kCrb_t7i69tTKVTOuVVnJFO-5ck")
