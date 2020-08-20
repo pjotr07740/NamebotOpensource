@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import os
 
-bot = commands.Bot(command_prefix=".")
+bot = commands.Bot(command_prefix=".", help_command=None)
 
 
 @bot.command()
