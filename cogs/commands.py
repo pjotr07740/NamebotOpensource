@@ -18,7 +18,7 @@ class Commands(commands.Cog):
         self.bot = bot
 
     @commands.command()
-    @commands.has_permissions(manage_messages=True)
+    @commands.has_permissions(view_audit_log=True)
     async def change_nickname(self, ctx, member: discord.Member = None, username=None, reason=None):
 
         fail_no_member_provided = discord.Embed(
@@ -60,7 +60,7 @@ class Commands(commands.Cog):
         await ctx.send(content=None, embed=successful_embed)
 
     @commands.command()
-    @commands.has_permissions(manage_messages=True)
+    @commands.has_permissions(view_audit_log=True)
     async def remove_username(self, ctx, member: discord.Member = None, reason=None):
         member = member
         reason = reason
@@ -104,7 +104,7 @@ class Commands(commands.Cog):
         await ctx.send(content=None, embed=successful_embed)
 
     @commands.command()
-    @commands.has_permissions(administrator=True)
+    @commands.has_permissions(view_audit_log=True)
     async def scan_all_members(self, ctx, reason=None):
         members = ctx.message.guild.members
         for member in members:
@@ -118,6 +118,16 @@ class Commands(commands.Cog):
         ping = round(self.bot.latency * 1000)
         await ctx.send(f"Ping is {ping}ms")
 
+    @commands.command()
+    async def help(self, ctx):
+        embed = discord.Embed(
+            title="Help",
+            description="Help on Namebot"
+        )
+        embed.add_field(name="Bot Developer", value="```load [cog]```\n```unload [cog]```")
+        embed.add_field(name="Moderators and Bot developer", value="```change_nickname [member] [username] [reason]```\n```remove_username [member] [reason]```\n```scan_all_members [reason]```")
+        embed.add_field(name="Public", value="```ping```\n```help```")
+        await ctx.send(content=None, embed=embed)
 
 def setup(bot):
     bot.add_cog(Commands(bot))
