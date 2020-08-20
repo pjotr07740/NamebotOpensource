@@ -116,7 +116,7 @@ class Commands(commands.Cog):
     @commands.command()
     @commands.has_permissions(view_audit_log=True)
     async def purge(self, ctx):
-        await ctx.channel.purge(limit=1)
+        await ctx.channel.purge(limit=2)
 
     @commands.command()
     async def ping(self, ctx):
