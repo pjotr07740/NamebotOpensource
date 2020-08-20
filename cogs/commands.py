@@ -124,9 +124,9 @@ class Commands(commands.Cog):
             title="Help",
             description="Help on Namebot"
         )
-        embed.add_field(name="Bot Developer", value="```load [cog]```\n```unload [cog]```")
-        embed.add_field(name="Moderators and Bot developer", value="```change_nickname [member] [username] [reason]```\n```remove_username [member] [reason]```\n```scan_all_members [reason]```")
-        embed.add_field(name="Public", value="```ping```\n```help```")
+        embed.add_field(name="Bot Developer", value="```load [cog]```\n```unload [cog]```", inline=False)
+        embed.add_field(name="Moderators and Bot developer", value="```change_nickname [member] [username] [reason]```\n```remove_username [member] [reason]```\n```scan_all_members [reason]```", inline=False)
+        embed.add_field(name="Public", value="```ping```\n```help```", inline=False)
         await ctx.send(content=None, embed=embed)
 
 def setup(bot):
