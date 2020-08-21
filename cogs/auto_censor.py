@@ -43,8 +43,9 @@ class AutoCensor(commands.Cog):
                     username_change_bot.add_field(name="User", value=f"```{after}```")
                     try:
                         await after.edit(nick="[NAME REDACTED]", reason="Auto change")
-                    finally:
+                    except:
                         pass
+                    finally:
                         await after.send("You're username contains profanity if you think this is an error dm `Pjotr#1418`!")
                         await channel.send(content=None, embed=username_change_bot)
                     return
@@ -82,10 +83,15 @@ class AutoCensor(commands.Cog):
             for bad_word in bad_words:
                 if nick.count(bad_word) > 0:
                     username_change_bot.add_field(name="User", value=f"```{member}```")
-                    await member.edit(nick="[NAME REDACTED]", reason="Auto change")
-                    await member.send("You're contains profanity if you think this is an error dm `Pjotr#1418`!")
-                    await channel.send(content=None, embed=username_change_bot)
-                    break
+                    try:
+                        await member.edit(nick="[NAME REDACTED]", reason="Auto change")
+                    except:
+                        pass
+                    finally:
+                        await member.send(
+                            "You're username contains profanity if you think this is an error dm `Pjotr#1418`!")
+                        await channel.send(content=None, embed=username_change_bot)
+                    return
 
         await asyncio.sleep(10)
         if nick is not None:
