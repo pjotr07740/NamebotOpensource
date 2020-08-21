@@ -45,7 +45,7 @@ class AutoCensor(commands.Cog):
                         await after.edit(nick="[NAME REDACTED]", reason="Auto change")
                     except:
                         pass
-                    await after.send("You're contains profanity if you think this is an error dm `Pjotr#1418`!")
+                    await after.send("You're username contains profanity if you think this is an error dm `Pjotr#1418`!")
                     await channel.send(content=None, embed=username_change_bot)
                     break
 
