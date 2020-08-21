@@ -43,11 +43,11 @@ class AutoCensor(commands.Cog):
                     username_change_bot.add_field(name="User", value=f"```{after}```")
                     try:
                         await after.edit(nick="[NAME REDACTED]", reason="Auto change")
-                    except:
+                    finally:
                         pass
-                    await after.send("You're username contains profanity if you think this is an error dm `Pjotr#1418`!")
-                    await channel.send(content=None, embed=username_change_bot)
-                    break
+                        await after.send("You're username contains profanity if you think this is an error dm `Pjotr#1418`!")
+                        await channel.send(content=None, embed=username_change_bot)
+                    return
 
         await asyncio.sleep(10)
         if nick is not None:
