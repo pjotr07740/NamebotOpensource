@@ -134,5 +134,11 @@ class Commands(commands.Cog):
         embed.add_field(name="Public", value="```ping```\n```help```", inline=False)
         await ctx.send(content=None, embed=embed)
 
+    @commands.command()
+    @commands.has_permissions(view_audit_log=True)
+    async def emshut(self, ctx):
+        await ctx.send("Shutting down...")
+        exit()
+
 def setup(bot):
     bot.add_cog(Commands(bot))
