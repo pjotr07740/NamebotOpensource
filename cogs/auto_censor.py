@@ -46,7 +46,6 @@ class AutoCensor(commands.Cog):
                     except:
                         pass
                     finally:
-                        await after.send("You're username contains profanity if you think this is an error dm `Pjotr#1418`!")
                         await channel.send(content=None, embed=username_change_bot)
                     return
 
@@ -88,8 +87,6 @@ class AutoCensor(commands.Cog):
                     except:
                         pass
                     finally:
-                        await member.send(
-                            "You're username contains profanity if you think this is an error dm `Pjotr#1418`!")
                         await channel.send(content=None, embed=username_change_bot)
                     return
 
