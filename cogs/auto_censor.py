@@ -59,44 +59,6 @@ class AutoCensor(commands.Cog):
                     return
 
     @commands.Cog.listener()
-    async def on_user_update(self, before, after):
-        username_change_bot = discord.Embed(
-            title="Username changed",
-            description="Namebot changed a username"
-        )
-
-        username_change_user = discord.Embed(
-            title="Username changed",
-            description="Someone changed his/her username"
-        )
-
-        guild = after.guild
-        channel = discord.utils.get(guild.text_channels, name="logs")
-
-        try:
-            nick = after.nick.lower()
-        except Exception as e:
-            nick = None
-
-        if nick is not None:
-            for bad_word in bad_words:
-                if nick.count(bad_word) > 0:
-                    username_change_bot.add_field(name="User", value=f"```{after}```")
-                    await after.edit(nick="[NAME REDACTED]", reason="Auto change")
-                    await after.send("You're contains profanity if you think this is an error dm `Pjotr#1418`!")
-                    await channel.send(content=None, embed=username_change_bot)
-                    break
-
-        await asyncio.sleep(10)
-        if nick is not None:
-            for bad_word in bad_words:
-                if not nick.find(bad_word):
-                    username_change_user.add_field(name="User", value=f"```{after}```")
-                    username_change_user.add_field(name="New username", value=f"```{nick}```")
-                    await channel.send(content=None, embed=username_change_user)
-                    return
-
-    @commands.Cog.listener()
     async def on_member_join(self, member):
         username_change_bot = discord.Embed(
             title="Username changed",
