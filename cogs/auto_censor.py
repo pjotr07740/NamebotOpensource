@@ -31,7 +31,7 @@ class AutoCensor(commands.Cog):
             description="Someone changed his/her username"
         )
 
-        guild = self.bot.get_guild(167435050105700352)
+        guild = self.after.guild
         channel = discord.utils.get(guild.text_channels, name="logs")
         try:
             nick = after.nick.lower()
@@ -70,7 +70,7 @@ class AutoCensor(commands.Cog):
             description="Someone changed his/her username"
         )
 
-        guild = self.bot.get_guild(167435050105700352)
+        guild = self.after.guild
         channel = discord.utils.get(guild.text_channels, name="logs")
 
         try:
@@ -108,7 +108,7 @@ class AutoCensor(commands.Cog):
             description="Someone changed his/her username"
         )
 
-        guild = self.bot.get_guild(741707396648534017)
+        guild = self.member.guild
         channel = discord.utils.get(guild.text_channels, name="logs")
 
         try:
