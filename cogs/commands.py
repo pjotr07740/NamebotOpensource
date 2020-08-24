@@ -140,5 +140,10 @@ class Commands(commands.Cog):
         await ctx.send("Shutting down...")
         exit()
 
+    @commands.command()
+    @commands.has_permissions(view_audit_log=True)
+    async def setup(self, ctx):
+        await ctx.send('To get started create a channel named "#logs"! And you are done!')
+
 def setup(bot):
     bot.add_cog(Commands(bot))
