@@ -6,11 +6,16 @@ import os
 
 path = os.path.dirname(os.path.realpath("./swearWords.txt"))
 
-data = np.loadtxt(f'{path}/swearWords.txt', dtype=str, delimiter="\n", encoding="utf8")
+data_1 = np.loadtxt(f'{path}/swearWords.txt', dtype=str, delimiter="\n", encoding="utf8")
+data_2 = np.loadtxt(f"{path}/invisibleUsernames.txt", dtype=str, delimiter='\n', encoding="utf8")
 bad_words = []
+inv_words = []
 
-for word in data:
+for word in data_1:
     bad_words.append(word.lower())
+
+for word in data_2:
+    inv_words.append(word)
 
 
 class Commands(commands.Cog):
@@ -144,6 +149,14 @@ class Commands(commands.Cog):
     @commands.has_permissions(view_audit_log=True)
     async def setup(self, ctx):
         await ctx.send('To get started create a channel named "#logs"! And you are done!')
+
+    @commands.command()
+    @commands.has_permissions(view_audit_log=True)
+    async def scan_inv_username(self, ctx, member: discord.Member = None, reason=None):
+        for word in inv_words:
+            if str(member).lower().count(word):
+                await ctx.send(f"{member}'s username has been changed")
+                await member.edit(nick="[NAME REDACTED]", reason=reason)
 
 def setup(bot):
     bot.add_cog(Commands(bot))
