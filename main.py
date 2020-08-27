@@ -2,6 +2,12 @@ import discord
 from discord.ext import commands
 import os
 
+file = open("token.txt")
+
+data = file.read()
+
+file.close()
+
 bot = commands.Bot(command_prefix=".", help_command=None)
 
 
@@ -30,4 +36,4 @@ for filename in os.listdir('./cogs'):
         bot.load_extension(f"cogs.{filename[:-3]}")
 
 
-bot.run("NzEyNDE1ODk4MjAzNTg2NTcw.XsRPAg.66dh1EqV0rKExNQgaak0uMJHPIA")
+bot.run(data)
