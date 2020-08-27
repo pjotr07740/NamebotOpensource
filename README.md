@@ -1,4 +1,4 @@
-![License](https://img.shields.io/github/license/pjotr07740/Namebot) ![Last commit](https://img.shields.io/github/last-commit/pjotr07740/Namebot) ![Maintained](https://img.shields.io/maintenance/yes/2020)
+![License](https://img.shields.io/github/license/pjotr07740/NamebotOpensource) ![Last commit](https://img.shields.io/github/last-commit/pjotr07740/NamebotOpensource) ![Maintained](https://img.shields.io/maintenance/yes/2020)
 # Namebot
 ## The best name censoring for your server!
 
