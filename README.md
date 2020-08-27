@@ -13,7 +13,7 @@ This bot censors all usernames containing profanity with a word list, I know tha
 .setup
 
 ## Contributing
-Contributing/Leaving issues is not yet avalible, the GitHub Repository is set to private.
+Contributing/Leaving issues is avalible just head over to https://github.com/pjotr07740/NamebotOpensource to get started!
 
 ## Support
 The server is still to be worked on!
