@@ -104,4 +104,8 @@ class AutoCensor(commands.Cog):
 
 
 def setup(bot):
+    """
+    :param bot: a discord.client
+    :return: None
+    """
     bot.add_cog(AutoCensor(bot))
