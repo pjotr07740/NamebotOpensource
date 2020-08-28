@@ -46,7 +46,10 @@ class AutoCensor(commands.Cog):
                     except:
                         pass
                     finally:
-                        await channel.send(content=None, embed=username_change_bot)
+                        try:
+                            await channel.send(content=None, embed=username_change_bot)
+                        except:
+                            print("Logging failed...")
                     return
 
         await asyncio.sleep(10)
