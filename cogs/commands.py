@@ -138,12 +138,14 @@ class Commands(commands.Cog):
         embed.add_field(name="Moderators and Bot developer", value="```change_nickname [member] [username] [reason]```\n```remove_username [member] [reason]```\n```scan_all_members [reason]```\n```purge```\n```emshut```", inline=False)
         embed.add_field(name="Public", value="```ping```\n```help```", inline=False)
         await ctx.send(content=None, embed=embed)
-
+    """
+    Disabled until fixed
     @commands.command()
     @commands.has_permissions(view_audit_log=True)
     async def emshut(self, ctx):
         await ctx.send("Shutting down...")
         exit()
+    """
 
     @commands.command()
     @commands.has_permissions(view_audit_log=True)
