@@ -1,13 +1,12 @@
 import discord
 from discord.ext import commands
-import numpy as np
 import asyncio
 import os
 
 
 path = os.path.dirname(os.path.realpath("./swearWords.txt"))
 
-data = np.loadtxt(f'{path}/swearWords.txt', dtype=str, delimiter="\n", encoding="utf8")
+data = open("swearWords.txt", "r")
 bad_words = []
 
 
@@ -46,7 +45,10 @@ class AutoCensor(commands.Cog):
                     except:
                         pass
                     finally:
-                        await channel.send(content=None, embed=username_change_bot)
+                        try:
+                            await channel.send(content=None, embed=username_change_bot)
+                        except:
+                            print("Logging failed...")
                     return
 
         await asyncio.sleep(10)
@@ -101,4 +103,8 @@ class AutoCensor(commands.Cog):
 
 
 def setup(bot):
+    """
+    :param bot: a discord.client
+    :return: None
+    """
     bot.add_cog(AutoCensor(bot))

@@ -1,21 +1,23 @@
 import discord
 from discord.ext import commands
-import numpy as np
 import os
 
 
 path = os.path.dirname(os.path.realpath("./swearWords.txt"))
 
-data_1 = np.loadtxt(f'{path}/swearWords.txt', dtype=str, delimiter="\n", encoding="utf8")
-data_2 = np.loadtxt(f"{path}/invisibleUsernames.txt", dtype=str, delimiter='\n', encoding="utf8")
+data_1 = open("swearWords.txt", "r")
 bad_words = []
 inv_words = []
 
+
+def isBotStaff(ctx):
+    if ctx.message.author.id == 662014520943706133:
+        return True
+    elif ctx.message.author.id == 155763190431481857:
+        return True
+
 for word in data_1:
     bad_words.append(word.lower())
-
-for word in data_2:
-    inv_words.append(word)
 
 
 class Commands(commands.Cog):
@@ -118,29 +120,22 @@ class Commands(commands.Cog):
                     await ctx.send(f"{member}'s username has been changed")
                     await member.edit(nick="[NAME REDACTED]", reason=reason)
 
+
     @commands.command()
-    @commands.has_permissions(view_audit_log=True)
+    @commands.check(isBotStaff)
     async def purge(self, ctx):
         await ctx.channel.purge(limit=2)
+
+
 
     @commands.command()
     async def ping(self, ctx):
         ping = round(self.bot.latency * 1000)
         await ctx.send(f"Ping is {ping}ms")
 
-    @commands.command()
-    async def help(self, ctx):
-        embed = discord.Embed(
-            title="Help",
-            description="Help on Namebot"
-        )
-        embed.add_field(name="Bot Developer", value="```load [cog]```\n```unload [cog]```", inline=False)
-        embed.add_field(name="Moderators and Bot developer", value="```change_nickname [member] [username] [reason]```\n```remove_username [member] [reason]```\n```scan_all_members [reason]```\n```purge```\n```emshut```", inline=False)
-        embed.add_field(name="Public", value="```ping```\n```help```", inline=False)
-        await ctx.send(content=None, embed=embed)
 
     @commands.command()
-    @commands.has_permissions(view_audit_log=True)
+    @commands.check(isBotStaff)
     async def emshut(self, ctx):
         await ctx.send("Shutting down...")
         exit()
@@ -150,6 +145,7 @@ class Commands(commands.Cog):
     async def setup(self, ctx):
         await ctx.send('To get started create a channel named "#logs"! And you are done!')
 
+    """ Deprecated because of new host
     @commands.command()
     @commands.has_permissions(view_audit_log=True)
     async def scan_inv_username(self, ctx, member: discord.Member = None, reason=None):
@@ -157,6 +153,10 @@ class Commands(commands.Cog):
             if str(member).lower().count(word):
                 await ctx.send(f"{member}'s username has been changed")
                 await member.edit(nick="[NAME REDACTED]", reason=reason)
+    """
+
+
+
 
 def setup(bot):
     bot.add_cog(Commands(bot))

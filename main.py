@@ -23,7 +23,7 @@ async def unload(extension):
 
 @bot.event
 async def on_ready():
-    os.system("cls")
+    print(f"In {len(bot.guilds)} guilds")
     print(f"Bot loaded! Discord.py Version {discord.__version__}")
     ping = round(bot.latency * 1000)
     print(f"Ping is {ping}ms")
