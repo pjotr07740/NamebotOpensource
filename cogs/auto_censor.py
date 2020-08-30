@@ -1,13 +1,12 @@
 import discord
 from discord.ext import commands
-import numpy as np
 import asyncio
 import os
 
 
 path = os.path.dirname(os.path.realpath("./swearWords.txt"))
 
-data = np.loadtxt(f'{path}/swearWords.txt', dtype=str, delimiter="\n", encoding="utf8")
+data = open("swearWords.txt", "r")
 bad_words = []
 
 
