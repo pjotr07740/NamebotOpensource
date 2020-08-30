@@ -1,4 +1,4 @@
-![License](https://img.shields.io/github/license/pjotr07740/Namebot) ![Last commit](https://img.shields.io/github/last-commit/pjotr07740/Namebot) ![Maintained](https://img.shields.io/maintenance/yes/2020)
+![License](https://img.shields.io/github/license/pjotr07740/NamebotOpensource) ![Last commit](https://img.shields.io/github/last-commit/pjotr07740/NamebotOpensource) ![Maintained](https://img.shields.io/maintenance/yes/2020)
 # Namebot
 ## The best name censoring for your server!
 
@@ -13,7 +13,7 @@ This bot censors all usernames containing profanity with a word list, I know tha
 .setup
 
 ## Contributing
-Contributing/Leaving issues is not yet avalible, the GitHub Repository is set to private.
+Contributing/Leaving issues is avalible just head over to https://github.com/pjotr07740/NamebotOpensource to get started!
 
 ## Support
-The server is still to be worked on!
+https://discord.gg/KMfTrVr
