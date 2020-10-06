@@ -17,7 +17,7 @@
   <ol>
     <li><a href="https://github.com/pjotr07740/NamebotOpensource/blob/master/README.md#inviting-the-bot">Inviting the bot</a></li>
     <li><a href="https://github.com/pjotr07740/NamebotOpensource/blob/master/README.md#setting-it-up">Setting it up</a></li>
-    <li><a href="<a href="https://github.com/pjotr07740/NamebotOpensource/blob/master/README.md#done">Done!</a></li>
+    <li><a href="https://github.com/pjotr07740/NamebotOpensource/blob/master/README.md#done">Done!</a></li>
   </ol>
   <h4>Inviting the bot</h4>
   <h4>Setting it up</li>
