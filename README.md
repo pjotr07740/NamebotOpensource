@@ -11,7 +11,7 @@
   <h3>Code style: <img src="https://img.shields.io/badge/code%20style-black-000000.svg"></h3>
 <div>
   <h3>About</h3>
-  <p>Namebot is a project that I started while quarantining when I started I knew only the bare surface of coding, currently I have coded a full sharded discord bot. As of rightnow I am busy with coding V3 of Namebot it will have log channel customization and much more!</p>
+  <p>Namebot is a project that I started while quarantining when I started I knew only the bare surface of coding, currently I have coded a full sharded discord bot. As of right now, I am busy with coding V3 of Namebot it will have log channel customization and much more!</p>
 </div>
 <div>
   <h3>Purpose</h3>
