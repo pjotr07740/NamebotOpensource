@@ -25,3 +25,6 @@
   <p>To set-up the bot you need to create a channel named 'logs' then the bot will log it's actions automatically!
   <h4>Done!</h4>
 </div>
+<div>
+  <h3>How did you start your bot?</h3>
+  <p>I don't know I was just bored and was sitting behind my desk all day gaming or making homework that got really boring so I started coding I looked up Python coding and started came by the channel called 'Tech With Tim' I watched around 4 of his tutorials until I came by the discord bot tutorial (I do not reccomend this tutorial anymore because it is outdated) then I started brainstorming about a bot that I want to create and there Namebot was born, I designed a logo posted in a self-promo channel of discord.gg/ftm and then a moderator came to me and thought that my bot was very useful, he went to the head moderator and he initiated a poll in between the mods, it got approved! From there I kept coding V1 for about a month, then V2 came with new, better and rewritten cogs! And currently here I am coding V3 and fixing the last bugs in V2. 
