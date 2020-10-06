@@ -68,7 +68,7 @@
     <p>People who have contributed to Namebot may see that data, affiliated bot developers.<br>Contributors as of 2020, 2 Oct:</p>
     <ul>
       <li>Vincentsgm</li>
-      <li><a href="https://github.com/sEbi3">@sEbi3</li>
+      <li><a href="https://github.com/sEbi3">@sEbi3</a></li>
       <li>Justin99989</li>
       <li>ItzVoid</li>
       <li><a href="https://github.com/AmKoma">@AmKOMA</a></li>
