@@ -1,14 +1,11 @@
 <div>
-  <h3>Version</h3>
-  <img src="https://img.shields.io/github/v/release/pjotr07740/NamebotOpensource">
+  <h3>Version: <img src="https://img.shields.io/github/v/release/pjotr07740/NamebotOpensource"></h3>
 </div>
 <div>
-  <h3><a href="https://discord.gg/ctw6rjs">Support Server</a></h3>
-  <img src="https://img.shields.io/discord/715558840959238154">
+  <h3><a href="https://discord.gg/ctw6rjs">Support Server</a>: <img src="https://img.shields.io/discord/715558840959238154"></h3>
 </div>
 <div>
-  <h3>Requirements</h3>
-  <img src="https://img.shields.io/requires/github/pjotr07740/NamebotOpensource">
+  <h3>Requirements: <img src="https://img.shields.io/requires/github/pjotr07740/NamebotOpensource"></h3>
 </div>
 <div>
   <h3>About</h3>
@@ -23,3 +20,6 @@
     <li>Done!</li>
   </ol>
   <h4>Inviting the bot</h4>
+  <h4>Setting it up</li>
+  <h4>Done!</h4>
+</div>
