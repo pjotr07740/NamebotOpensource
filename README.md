@@ -20,6 +20,8 @@
     <li><a href="https://github.com/pjotr07740/NamebotOpensource/blob/master/README.md#done">Done!</a></li>
   </ol>
   <h4>Inviting the bot</h4>
-  <h4>Setting it up</li>
+  <p>Inviting the bot is very simple just click <a href="https://discord.com/oauth2/authorize?client_id=712415898203586570&scope=bot&permissions=469888192">this</a> link and follow <a href="https://www.youtube.com/watch?v=2YO96GFBSLw1">these</a> steps.
+  <h4>Setting it up</h4>
+  <p>To set-up the bot you need to create a channel named 'logs' then the bot will log it's actions automatically!
   <h4>Done!</h4>
 </div>
