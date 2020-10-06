@@ -8,9 +8,14 @@
   <h3>Requirements: <img src="https://img.shields.io/requires/github/pjotr07740/NamebotOpensource"></h3>
 </div>
 <div>
+  <h3>Code style: <img src="https://img.shields.io/badge/code%20style-black-000000.svg"></h3>
+<div>
   <h3>About</h3>
   <p>Namebot is a project that I started while quarantining when I started I knew only the bare surface of coding, currently I have coded a full sharded discord bot. As of rightnow I am busy with coding V3 of Namebot it will have log channel customization and much more!</p>
 </div>
+<div>
+  <h3>Purpose</h3>
+  <p>The purpose of this bot is really simple, it censors usernames containing profanity. Or you can change them manually using a command. The bot scans usernames when you run the .scan_all_members command, when a user joins a server or if a user updates their username.
 <div>
   <h3>Tutorial</h3>
   <p>To start using Namebot is really simple just follow these steps:</p>
