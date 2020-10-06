@@ -15,7 +15,7 @@
   <h3>Tutorial</h3>
   <p>To start using Namebot is really simple just follow these steps:</p>
   <ol>
-    <li>Inviting the bot</li>
+    <li><a href="https://github.com/pjotr07740/NamebotOpensource/blob/master/README.md#inviting-the-bot">Inviting the bot</a></li>
     <li>Setting it up</li>
     <li>Done!</li>
   </ol>
