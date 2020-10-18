@@ -1,3 +1,4 @@
+<img src="https://top.gg/api/widget/712415898203586570.svg"/>
 <div>
   <h3>Version: <img src="https://img.shields.io/github/v/release/pjotr07740/NamebotOpensource"></h3>
 </div>
